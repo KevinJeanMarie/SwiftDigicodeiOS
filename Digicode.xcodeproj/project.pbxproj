@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072BF2C729D57EE700A7C3A1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072BF2C629D57EE700A7C3A1 /* SignInView.swift */; };
+		072BF2C929D59BE200A7C3A1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072BF2C829D59BE200A7C3A1 /* ViewModel.swift */; };
 		07B279F629D4300300042D80 /* DigicodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B279F529D4300300042D80 /* DigicodeApp.swift */; };
 		07B279F829D4300300042D80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B279F729D4300300042D80 /* ContentView.swift */; };
 		07B279FA29D4300400042D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B279F929D4300400042D80 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		072BF2C629D57EE700A7C3A1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		072BF2C829D59BE200A7C3A1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		07B279F229D4300300042D80 /* Digicode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digicode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B279F529D4300300042D80 /* DigicodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigicodeApp.swift; sourceTree = "<group>"; };
 		07B279F729D4300300042D80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 			children = (
 				07B279F529D4300300042D80 /* DigicodeApp.swift */,
 				07B279F729D4300300042D80 /* ContentView.swift */,
+				072BF2C829D59BE200A7C3A1 /* ViewModel.swift */,
+				072BF2C629D57EE700A7C3A1 /* SignInView.swift */,
 				07B27A0929D44ECD00042D80 /* GoogleService-Info.plist */,
 				07B279F929D4300400042D80 /* Assets.xcassets */,
 				07B279FB29D4300400042D80 /* Preview Content */,
@@ -165,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072BF2C729D57EE700A7C3A1 /* SignInView.swift in Sources */,
 				07B279F829D4300300042D80 /* ContentView.swift in Sources */,
+				072BF2C929D59BE200A7C3A1 /* ViewModel.swift in Sources */,
 				07B279F629D4300300042D80 /* DigicodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

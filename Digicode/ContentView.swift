@@ -10,39 +10,39 @@ import FirebaseAuth
 import FirebaseAuthCombineSwift
 
 struct ContentView: View {
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = ViewModel()
+    //@State var connected = (Auth.auth().currentUser != .none)
     
     var body: some View {
-        VStack {
-            Image(systemName: "person.crop.circle.fill.badge.plus")
-                .imageScale(.large)
-                .font(.system(size: 50))                .foregroundColor(.accentColor)
-            Text("Please login")
-            
-                TextField("Login", text: $email)
-                .font(Font.system(size:18))
-                .padding(8)
-                .background(RoundedRectangle(cornerRadius:50).fill(Color.blue))
-                .padding(5)
-                .offset(x:8, y: 10)
-                .keyboardType(.emailAddress)
-                .textInputAutocapitalization(.never)
-                .disableAutocorrection(true)
-            
-                SecureField("Password", text : $password)
-                .font(Font.system(size:18))
-                .padding(8)
-                .background(RoundedRectangle(cornerRadius:50).fill(Color.blue))
-                .padding(5)
-                .offset(x:8, y: 10)
-            
-            Button("Login", action: {
-                print("Login")
-            })
-            .font(Font.system(size:25))
-            .offset(y: 30)            }
-            .padding()
+        Group {
+            if (viewModel.connected) {
+              VStack {
+                  Button("Logout", action: {
+                      do {
+                          try Auth.auth().signOut()
+                          //connected = false
+                      } catch {
+                          print("Error: \(error.localizedDescription)")
+                      }
+                  })
+              }
+              .padding()
+        } else {
+            SignInView(/*connected: $connected*/)
+        }
+    }
+    
+//            .onReceive(Auth.auth().authStateDidChangePublisher()) { user in
+//                switch user {
+//                case .none:
+//                    print("Disconnected")
+//                    connected = false
+//        
+//                case .some(let user):
+//                    print("User\(user.uid) connected")
+//                    connected = true
+//                }
+//            }
     }
 }
 
@@ -51,3 +51,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
