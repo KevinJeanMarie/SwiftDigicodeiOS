@@ -48,19 +48,19 @@ struct SignInView: View {
                 .offset(x:8, y: 10)
             //
             
-            Button("Login", action: {
-                print("e-mail: \(email), password: \(password)")
+            Button("Sign in", action: {
+                ViewModel.signIn(withEmail: email, password: password)
+                //print("e-mail: \(email), password: \(password)")
                 
-                Auth.auth().signIn(withEmail: email, password: password) {(/*result*/_, error) in
-                    if let error = error {
-                        print("Error: \(error)")
-                        return
-                    }
+//                Auth.auth().signIn(withEmail: email, password: password) {(/*result*/_, error) in
+//                    if let error = error {
+//                        print("Error: \(error)")
+//                        return
+//                    }
 //                    if let result = result {
 //                        //connected = true
 //                        print("\(result.user.uid)")
 //                    }
-                }
             })
             
             //styles
@@ -69,6 +69,7 @@ struct SignInView: View {
             //
         }
         .padding()
+        .interactiveDismissDisabled()
     }
 }
 

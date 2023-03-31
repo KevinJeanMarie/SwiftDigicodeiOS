@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		072BF2C729D57EE700A7C3A1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072BF2C629D57EE700A7C3A1 /* SignInView.swift */; };
 		072BF2C929D59BE200A7C3A1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072BF2C829D59BE200A7C3A1 /* ViewModel.swift */; };
+		074E715229D5C2CC00877FD8 /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E715129D5C2CC00877FD8 /* Code.swift */; };
 		07B279F629D4300300042D80 /* DigicodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B279F529D4300300042D80 /* DigicodeApp.swift */; };
 		07B279F829D4300300042D80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B279F729D4300300042D80 /* ContentView.swift */; };
 		07B279FA29D4300400042D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B279F929D4300400042D80 /* Assets.xcassets */; };
@@ -20,11 +21,13 @@
 		07B27A1129D4525600042D80 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 07B27A1029D4525600042D80 /* FirebaseFirestore */; };
 		07B27A1329D4525600042D80 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 07B27A1229D4525600042D80 /* FirebaseFirestoreCombine-Community */; };
 		07B27A1529D4525600042D80 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 07B27A1429D4525600042D80 /* FirebaseFirestoreSwift */; };
+		07E74BFD29D6DBAE0064908A /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E74BFC29D6DBAE0064908A /* CodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		072BF2C629D57EE700A7C3A1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		072BF2C829D59BE200A7C3A1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		074E715129D5C2CC00877FD8 /* Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
 		07B279F229D4300300042D80 /* Digicode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digicode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B279F529D4300300042D80 /* DigicodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigicodeApp.swift; sourceTree = "<group>"; };
 		07B279F729D4300300042D80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +35,8 @@
 		07B279FC29D4300400042D80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07B27A0729D44D7400042D80 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		07B27A0929D44ECD00042D80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07E74BFC29D6DBAE0064908A /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		07E74BFE29D6EEA70064908A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +74,10 @@
 		07B279F429D4300300042D80 /* Digicode */ = {
 			isa = PBXGroup;
 			children = (
+				07E74BFE29D6EEA70064908A /* Info.plist */,
 				07B279F529D4300300042D80 /* DigicodeApp.swift */,
+				074E715129D5C2CC00877FD8 /* Code.swift */,
+				07E74BFC29D6DBAE0064908A /* CodeView.swift */,
 				07B279F729D4300300042D80 /* ContentView.swift */,
 				072BF2C829D59BE200A7C3A1 /* ViewModel.swift */,
 				072BF2C629D57EE700A7C3A1 /* SignInView.swift */,
@@ -174,7 +182,9 @@
 				072BF2C729D57EE700A7C3A1 /* SignInView.swift in Sources */,
 				07B279F829D4300300042D80 /* ContentView.swift in Sources */,
 				072BF2C929D59BE200A7C3A1 /* ViewModel.swift in Sources */,
+				07E74BFD29D6DBAE0064908A /* CodeView.swift in Sources */,
 				07B279F629D4300300042D80 /* DigicodeApp.swift in Sources */,
+				074E715229D5C2CC00877FD8 /* Code.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -285,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -305,6 +315,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Digicode/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Digicode/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Pour savoir ou on se trouve\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -333,6 +345,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Digicode/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Digicode/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"Pour savoir ou on se trouve\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

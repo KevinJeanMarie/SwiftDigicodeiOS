@@ -2,48 +2,37 @@
 //  ContentView.swift
 //  Digicode
 //
-//  Created by Les Prodiges on 29/03/2023.
+//  Created by Etienne Vautherin on 29/03/2023.
 //
-
 import SwiftUI
 import FirebaseAuth
 import FirebaseAuthCombineSwift
 
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
-    //@State var connected = (Auth.auth().currentUser != .none)
+    @State var showingSheet = false
     
     var body: some View {
-        Group {
-            if (viewModel.connected) {
-              VStack {
-                  Button("Logout", action: {
-                      do {
-                          try Auth.auth().signOut()
-                          //connected = false
-                      } catch {
-                          print("Error: \(error.localizedDescription)")
-                      }
-                  })
-              }
-              .padding()
-        } else {
-            SignInView(/*connected: $connected*/)
+        NavigationStack {
+        VStack {
+            List(viewModel.codes) { code in
+                //Text(code.name)
+                NavigationLink(code.name, value: code)
+            }
+            Button("Sign Out", action: ViewModel.signOut)
         }
-    }
-    
-//            .onReceive(Auth.auth().authStateDidChangePublisher()) { user in
-//                switch user {
-//                case .none:
-//                    print("Disconnected")
-//                    connected = false
-//        
-//                case .some(let user):
-//                    print("User\(user.uid) connected")
-//                    connected = true
-//                }
-//            }
-    }
+        .navigationDestination(for: Code.self) { code in
+            CodeView(code: code)
+        }
+        .sheet(isPresented: $showingSheet) {
+            SignInView()
+        }
+        .onReceive(viewModel.$connected) { connected in
+            print("connected received")
+            showingSheet = !connected
+        }
+     }
+   }
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -51,5 +40,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
